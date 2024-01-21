@@ -1,4 +1,4 @@
-const mongoose = require('mongoose')
+const mongoose = require("mongoose")
 
 const userSchema = new mongoose.Schema({
     name:{
@@ -25,22 +25,22 @@ const userSchema = new mongoose.Schema({
             mobileNo: String,
             houseNo: String,
             street: String,
-            landmark: String, 
-            city: String, 
+            landmark: String,
+            city: String,
             country: String,
             postalcode: String,
-        }
+        },
     ],
     orders:[
         {
             type: mongoose.Schema.Types.ObjectId,
             ref: "Order"
-        }
+        },
     ],
     createdAt: {
         type: Date,
         default: Date.now
-    }
+    },
 })
 
 const User = mongoose.model("User", userSchema);

@@ -1,5 +1,10 @@
 {
     "cSpell.words": [
         "Pressable"
-    ]
+    ],
+    "files.associations": {
+        "*.react.js": "javascriptreact",
+        "*.jsx": "javascriptreact",
+        "*.js": "javascriptreact",
+      }
 }

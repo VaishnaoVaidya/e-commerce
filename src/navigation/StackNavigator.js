@@ -7,6 +7,8 @@ import RegisterScreen from '../screens/RegisterScreen';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import HomeScreen from '../screens/HomeScreen';
 import ProductInfoScreen from '../screens/ProductInfoScreen';
+import AddAddressScreen from '../screens/AddAddressScreen';
+import AddressScreen from '../screens/AddressScreen';
 
 const StackNavigator = () => {
   const Stack = createNativeStackNavigator();
@@ -110,7 +112,7 @@ const StackNavigator = () => {
 
   return (
     <NavigationContainer>
-      <Stack.Navigator>
+      <Stack.Navigator >
         <Stack.Screen
           name="Login"
           component={LoginScreen}
@@ -129,6 +131,16 @@ const StackNavigator = () => {
         <Stack.Screen
           name="Info"
           component={ProductInfoScreen}
+          options={{headerShown: false}}
+        />
+        <Stack.Screen
+          name="Address"
+          component={AddAddressScreen}
+          options={{headerShown: false}}
+        />
+        <Stack.Screen
+          name="Add"
+          component={AddressScreen}
           options={{headerShown: false}}
         />
       </Stack.Navigator>

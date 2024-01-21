@@ -12,7 +12,7 @@ import {
 import React, {useState} from 'react';
 import {useNavigation, useRoute} from '@react-navigation/native';
 import {useDispatch, useSelector} from 'react-redux';
-import {addToCart} from '../../redux/CartReducer';
+import {addToCart} from '../redux/CartReducer';
 
 const ProductInfoScreen = () => {
   const route = useRoute();
@@ -213,7 +213,7 @@ const ProductInfoScreen = () => {
             }}
           />
           <Text style={{fontSize: 15, fontWeight: 'bold', color: '#000'}}>
-            Deliver to Vaishnai - Mehkar 443301
+            Deliver to Vaishnao - Mehkar 443301
           </Text>
         </View>
       </View>

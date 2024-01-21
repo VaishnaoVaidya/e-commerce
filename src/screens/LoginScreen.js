@@ -18,6 +18,7 @@ const LoginScreen = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const navigation = useNavigation();
+
   useEffect(() => {
     const checkLoginStatus = async () => {
       try {
@@ -41,9 +42,10 @@ const LoginScreen = () => {
     };
 
     axios
-      .post("http://192.168.203.183:8000/login", user)
+      .post("http://192.168.196.183:8000/login", user)
       .then((response) => {
-        console.log( JSON.stringify(response));
+        // console.log(response);
+        console.log(response.data.token);
         const token = response.data.token;
         AsyncStorage.setItem("authToken", token);
         navigation.replace("Main");
@@ -53,6 +55,7 @@ const LoginScreen = () => {
         console.log(error);
       });
   };
+  
   return (
     <SafeAreaView
       style={{flex: 1, backgroundColor: "white", alignItems: "center"}}>
